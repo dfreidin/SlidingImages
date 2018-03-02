@@ -1,0 +1,15 @@
+#keyleth {
+    width: 400px;
+    background-image: url("keyleth.jpg");
+}
+#machina {
+    width: 400px;
+    background-image: url("vox_machina.jpg");
+}
+#images, #slider {
+    display: inline-block;
+    vertical-align: top;
+}
+#slider {
+    height: 600px;
+}

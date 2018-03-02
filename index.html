@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sliding Image</title>
+        <link rel="stylesheet" href="style.css">
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+        <link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css'>
+        <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+        <script>
+            $(document).ready(function(){
+                $("#slider").slider({
+                    orientation: "vertical",
+                    range: "min",
+                    min: 0,
+                    max: 100,
+                    value: 50,
+                    slide: function(event, ui){
+                        $("#machina").css("height", (6*ui.value)+"px");
+                        $("#machina").css("background", "url('vox_machina.jpg') 0 "+(6*ui.value)+"px");
+                        $("#keyleth").css("height", (6*(100-ui.value))+"px");
+                    }
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <div id="images">
+            <div id="keyleth"></div>
+            <div id="machina"></div>
+        </div>
+        <div id="slider"></div>
+    </body>
+</html>
